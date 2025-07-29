@@ -1,19 +1,43 @@
-# fraud-financial-transaction
+# 💳 Credit Card Fraud Detection
 
-Detect fraud financial transactions
+A comparison study of five machine learning models to detect fraudulent financial transactions in a highly imbalanced dataset.
 
-Comparison study of 5 models:
+---
 
-- Random Forest
-- Ada Boost
-- XG Boost
-- Isolation Forest
-- Local Outlier Factor
+## 🔍 Models Evaluated
 
-First go through the data_exploration notebook, since the data .csv file and the metadata .json file, needs to be downloaded.
-Then, go through the classifier_experiment notebook for the model study/comparison.
+- **Random Forest**
+- **AdaBoost**
+- **XGBoost**
+- **Isolation Forest**
+- **Local Outlier Factor (LOF)**
 
-This data set is highly imbalanced, fraud transactions are very rare as compared to normal transactions.
-Our main motive is to detect and flag a fraud/anomaly in our system, so we look to maximize the RECALL value over PRECISION.
+---
 
-We could use SMOTE technique to balance out the minority class, but that is a different topic altogether.
+## 📂 Project Structure
+
+1. **`01_data_exploration.ipynb`**  
+   Begin here. You'll need to manually download the dataset files:
+
+   - A `.csv` file containing the transaction data
+   - A `.json` file containing the metadata
+
+2. **`02_classifier_experiment.ipynb`**  
+   This notebook runs the fraud detection experiments and compares model performance.
+
+---
+
+## ⚠️ About the Data
+
+The dataset is **highly imbalanced**, with fraud cases being extremely rare compared to normal transactions.
+
+Our objective is to **maximize the detection of fraudulent activities**.  
+Hence, **recall (true positive rate)** is prioritized over **precision**, as **missing a fraud is more costly than a false alert**.
+
+---
+
+## 💡 Note on SMOTE
+
+While **SMOTE** (Synthetic Minority Over-sampling Technique) can be used to rebalance the dataset, this experiment focuses on model performance without synthetic sampling. A future enhancement could explore its impact separately.
+
+---
